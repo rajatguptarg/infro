@@ -11,11 +11,12 @@ include *.conf
 include *.yml
 include *.ico
 recursive-include infro *.py
-recursive-include infro *.css
-recursive-include infro *.jinja
-recursive-include infro *.js
-recursive-include infro *.png
-recursive-include infro *.ico
+recursive-include api *.py
+recursive-include api *.css
+recursive-include api *.jinja
+recursive-include api *.js
+recursive-include api *.png
+recursive-include api *.ico
 global-exclude *.swp
 recursive-exclude infro *.pyc
 prune config

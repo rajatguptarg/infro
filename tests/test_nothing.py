@@ -8,6 +8,7 @@ Description:
 
 from nose.tools import assert_equals, assert_not_equal
 import infro    # noqa
+import api      # noqa
 
 
 __all__ = ['TestNothing']
