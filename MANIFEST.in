@@ -1,0 +1,24 @@
+include MANIFEST
+include Makefile
+include *.txt
+include *.md
+include *.in
+include LICENSE
+include *.py
+include tox.ini
+include .coveragerc
+include *.conf
+include *.yml
+include *.ico
+recursive-include infro *.py
+recursive-include infro *.css
+recursive-include infro *.jinja
+recursive-include infro *.js
+recursive-include infro *.png
+recursive-include infro *.ico
+
+exclude TODO
+global-exclude *.swp
+recursive-exclude infro *.pyc
+prune config
+prune tests
