@@ -1,0 +1,17 @@
+language: python
+sudo: false
+virtualenv:
+  system_site_packages: true
+python:
+  - "2.7"
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+script: tox
+env:
+  - TOXENV=py27
+after_success:
+  - coveralls
+notifications:
+  email:
+  - rajat.gupta712@gmail.com
