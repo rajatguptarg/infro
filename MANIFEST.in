@@ -16,8 +16,6 @@ recursive-include infro *.jinja
 recursive-include infro *.js
 recursive-include infro *.png
 recursive-include infro *.ico
-
-exclude TODO
 global-exclude *.swp
 recursive-exclude infro *.pyc
 prune config
