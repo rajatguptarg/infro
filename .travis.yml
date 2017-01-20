@@ -2,6 +2,10 @@ language: python
 sudo: false
 virtualenv:
   system_site_packages: true
+services:
+  - mongodb
+before_script:
+  - sleep 15
 python:
   - "2.7"
 install:
