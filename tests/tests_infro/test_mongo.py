@@ -6,8 +6,8 @@ Author: Rajat Gupta
 Description: Test module for mongo engine
 """
 
-from infro.engine import MongoEngine
-from nose.tools import assert_equals
+from infro.engine import MongoEngine, DBOperationException
+from nose.tools import assert_not_equals, raises
 
 
 __all__ = ['TestMongoClient']
@@ -23,5 +23,19 @@ class TestMongoClient(object):
         self.engine.disconnect()
 
     def test_0010_should_insert_record_in_db(self):
-        result = self.engine.insert_record(None, None)
-        assert_equals(result, True)
+        record = {
+            "name": "Rajat Gupta",
+            "age": 23
+        }
+
+        result = self.engine.insert_record(record, 'infro.details')
+        assert_not_equals(result.inserted_id, None)
+
+    @raises(DBOperationException)
+    def test_0020_should_throw_exception_if_db_is_not_found(self):
+        record = {
+            "name": "Rajat Gupta",
+            "age": 23
+        }
+        self.engine._db = None
+        self.engine.insert_record(record, 'infro.details')

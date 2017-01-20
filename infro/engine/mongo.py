@@ -8,7 +8,7 @@ Description: Mongo DB APIs
 
 from .db_mixins import DBMixin
 from pymongo import MongoClient
-from .db_exception import DBConnectionException
+from .db_exception import DBConnectionException, DBOperationException
 
 
 __all__ = ['MongoEngine']
@@ -22,7 +22,11 @@ class MongoEngine(DBMixin):
     _db = None
 
     def insert_record(self, record, collection):
-        return True
+        try:
+            collection = self._db[collection]
+        except:
+            raise DBOperationException("Unable to find collection")
+        return collection.insert_one(record)
 
     def _connect_by_db_uri(self):
         return MongoClient(self.uri)
