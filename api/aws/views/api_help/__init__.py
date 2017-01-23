@@ -5,7 +5,8 @@
 Author: Rajat Gupta
 Description:
 """
-import views
+
+from aws_help import AWSHelpView
 
 
-__all__ = ['views']
+__all__ = ['AWSHelpView']

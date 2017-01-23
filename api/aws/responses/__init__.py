@@ -5,7 +5,8 @@
 Author: Rajat Gupta
 Description:
 """
-import views
+
+from http_200 import HTTP200Response
 
 
-__all__ = ['views']
+__all__ = ['HTTP200Response']

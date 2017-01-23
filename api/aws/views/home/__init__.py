@@ -5,7 +5,8 @@
 Author: Rajat Gupta
 Description:
 """
-import views
+
+from all_help import HelpView
 
 
-__all__ = ['views']
+__all__ = ['HelpView']
