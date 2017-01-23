@@ -20,5 +20,5 @@ class HTTPResponse(object):
     __metaclass__ = ABCMeta
 
     @abstractmethod
-    def build_json_response(self, response):
+    def build_json_response(self, response, code):
         pass

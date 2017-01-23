@@ -11,14 +11,14 @@ from flask import Response
 from .resp_builder import HTTPResponse
 
 
-class HTTP200Response(HTTPResponse):
+class HTTPErrorResponse(HTTPResponse):
     """
-    http 200 reponse builder
+    http error reponse builder
     """
 
-    def build_json_response(self, info, code=200):
+    def build_json_response(self, info, code):
         data = {
-            "content": info
+            "errors": info
         }
         data = json.dumps(data)
         resp = Response(
