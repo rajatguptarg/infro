@@ -17,6 +17,8 @@ class HTTP200Response(HTTPResponse):
     """
 
     def build_json_response(self, info, code=200):
+        if not isinstance(info, list):
+            info = [info]
         data = {
             "content": info
         }

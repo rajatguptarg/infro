@@ -31,4 +31,4 @@ class CreateEC2View(FlaskView):
             password = request.json['password']     # noqa
         except:
             abort(400)
-        return http_200_response.build_json_response([request.json])
+        return http_200_response.build_json_response(request.json)

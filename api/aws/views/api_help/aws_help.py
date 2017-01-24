@@ -20,9 +20,9 @@ class AWSHelpView(FlaskView):
     route_base = ROUTE_BASE
 
     def get(self):
-        message = [{
+        message = {
             "api": "AWS",
             "description": "AWS Rest Framework API",
             "status": "OK"
-        }]
+        }
         return http_200_response.build_json_response(message)

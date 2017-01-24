@@ -17,6 +17,8 @@ class HTTPErrorResponse(HTTPResponse):
     """
 
     def build_json_response(self, info, code):
+        if not isinstance(info, list):
+            info = [info]
         data = {
             "errors": info
         }

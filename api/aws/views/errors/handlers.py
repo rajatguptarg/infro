@@ -19,8 +19,8 @@ def bad_request(e):
     """
     Handle 400 Errors
     """
-    data = [{
+    data = {
         "error": "Bad Request.",
         "details": str(e)
-    }]
+    }
     return http_error.build_json_response(data, 400)
