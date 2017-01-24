@@ -21,3 +21,7 @@ global-exclude *.swp
 recursive-exclude infro *.pyc
 prune config
 prune tests
+recursive-include infro *.cfg
+recursive-include infro *.ini
+recursive-include infro *.md
+recursive-include infro *.yml
