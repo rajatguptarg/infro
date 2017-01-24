@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+# flake8: noqa
 import json
 from flask import Flask, request, jsonify
 from tasks import create_ec2_instance, async_create_ec2_instance

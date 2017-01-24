@@ -32,6 +32,9 @@ api/aws/views/operations/create_ec2.py
 api/aws/views/operations/inventory.py
 infro/__init__.py
 infro/ansible/__init__.py
+infro/ansible/api.py
+infro/ansible/tasks.py
+infro/ansible/inventory/ec2.py
 infro/engine/__init__.py
 infro/engine/db_exception.py
 infro/engine/db_mixins.py

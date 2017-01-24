@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+# flake8: noqa
 '''
 EC2 external inventory script
 =================================
