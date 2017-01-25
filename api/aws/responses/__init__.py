@@ -7,6 +7,7 @@ Description:
 """
 
 from http_200 import HTTP200Response
+from http_errors import HTTPErrorResponse
 
 
-__all__ = ['HTTP200Response']
+__all__ = ['HTTP200Response', 'HTTPErrorResponse']

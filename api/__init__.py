@@ -13,6 +13,8 @@ from logging import Formatter
 # import views
 from api.aws.views.api_help import AWSHelpView
 from api.aws.views.home import HelpView
+from api.aws.views.operations import CreateEC2View
+from api.aws.views.errors import api_errors
 
 
 APP = Flask(__name__, static_folder='static', static_url_path='')
@@ -32,9 +34,12 @@ log_handler.setFormatter(Formatter(
 APP.logger.addHandler(log_handler)
 APP.jinja_env.autoescape = True
 
-
 # pragma mark - home
 HelpView.register(APP)
 
 # pragma mark - aws_api
 AWSHelpView.register(APP)
+CreateEC2View.register(APP)
+
+# pragma mark - error handlers
+APP.register_blueprint(api_errors)

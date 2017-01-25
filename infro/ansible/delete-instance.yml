@@ -1,0 +1,9 @@
+---
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Deleting ec2 instance
+      ec2:
+        region: ap-southeast-1
+        state: 'absent'
+        instance_ids: '{{ id }}'
