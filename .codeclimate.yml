@@ -10,8 +10,13 @@ engines:
       - php
   fixme:
     enabled: true
+    exclude_fingerprints:
+    - 39950f1b8ae38fb55b2f725828fa1ec7
   radon:
     enabled: true
+    exclude_fingerprints:
+    - dea8ce323c54dc193357b2627a6d67c8
+    - 6f166189e9dd080845caa6d47620cb25
 ratings:
   paths:
   - "**.inc"
