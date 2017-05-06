@@ -2,6 +2,7 @@
 .codeclimate.yml
 .coveragerc
 .travis.yml
+INSTALL.md
 LICENSE
 MANIFEST
 MANIFEST.in
