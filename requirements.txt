@@ -11,3 +11,4 @@ requests==2.12.5
 tox==2.5.0
 virtualenv==15.1.0
 Flask-Classy==0.6.10
+slackclient==1.0.5
